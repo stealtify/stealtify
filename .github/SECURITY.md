@@ -7,8 +7,8 @@ update to the newest build before reporting an issue.
 
 | Version | Supported |
 |---------|-----------|
-| 1.0.x   | ✅        |
-| < 1.0   | ❌        |
+| 1.38.x  | ✅        |
+| < 1.38  | ❌        |
 
 ## Reporting a vulnerability
 
@@ -17,7 +17,7 @@ update to the newest build before reporting an issue.
 Report privately through one of:
 
 - GitHub → **Security** tab → **Report a vulnerability** (private advisory), or
-- email **security@stealtify.app** (fallback: **support@stealtify.app**).
+- email **support@stealtify.app**.
 
 Include where possible:
 
