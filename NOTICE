@@ -1,0 +1,92 @@
+Stealtify
+Copyright (c) 2025-2026 Stealtify contributors.
+
+This product bundles and links against the following third-party components.
+Redistribution of Stealtify binaries (APK / AAB) must preserve the license
+notices below. For the full list of licenses and compatibility analysis see
+docs/LICENSES.md.
+
+================================================================================
+Shadowsocks (Stealtify's own implementation — no GPL)
+================================================================================
+
+  Stealtify implements the Shadowsocks (SIP004 AEAD) client itself
+  (gostengine/ssaead.go), using only the Go standard library and
+  golang.org/x/crypto (BSD-3-Clause). It does NOT use the GPL-3.0 libraries
+  github.com/sagernet/sing / github.com/sagernet/sing-shadowsocks.
+
+================================================================================
+MPL-2.0 components
+================================================================================
+
+  * github.com/xtls/xray-core — https://github.com/XTLS/Xray-core
+  * github.com/xtls/reality   — https://github.com/XTLS/REALITY
+
+  NOTE: Stealtify ships a MODIFIED version of xray-core (GPL components removed;
+  sing/sing-shadowsocks stripped). Per MPL-2.0, the source of the modified files
+  is made available to any recipient free of charge on written request to
+  support@stealtify.app.
+
+================================================================================
+Apache-2.0 components
+================================================================================
+
+  * AndroidX, Jetpack Compose, Material Components, Hilt, KSP, Dagger,
+    Coroutines, Kotlinx Serialization, Coil, gvisor.dev/gvisor,
+    github.com/vishvananda/netlink|netns, github.com/pires/go-proxyproto,
+    github.com/google/btree, google.golang.org/grpc,
+    google.golang.org/genproto/googleapis/rpc,
+    github.com/klauspost/compress (parts), gopkg.in/yaml.v2.
+
+Licensed under the Apache License, Version 2.0. See
+http://www.apache.org/licenses/LICENSE-2.0.
+
+================================================================================
+BSD-style components
+================================================================================
+
+  * golang.org/x/* (crypto, mobile, net, sys, text, mod, tools, exp, sync, time)
+  * github.com/miekg/dns
+  * github.com/cloudflare/circl
+  * github.com/refraction-networking/utls
+  * google.golang.org/protobuf
+  * github.com/gorilla/websocket (BSD-2-Clause)
+  * go4.org/netipx
+
+================================================================================
+MIT components
+================================================================================
+
+  * github.com/amnezia-vpn/amneziawg-go
+  * golang.zx2c4.com/wireguard
+  * github.com/apernet/quic-go, github.com/quic-go/qpack
+  * github.com/klauspost/cpuid/v2
+  * github.com/andybalholm/brotli
+  * github.com/pelletier/go-toml
+  * github.com/ghodss/yaml (dual MIT/BSD-3-Clause)
+  * lukechampine.com/blake3
+  * golang.zx2c4.com/wintun (not shipped in Android builds)
+  * org.robolectric:robolectric (test-only)
+
+================================================================================
+LGPL-linking-exception components
+================================================================================
+
+  * github.com/juju/ratelimit — LGPL-3.0 with linking exception.
+
+================================================================================
+Test-only components (not shipped in release APK)
+================================================================================
+
+  * JUnit 4 (EPL-1.0)
+  * MockK (Apache-2.0)
+  * AndroidX Test / Espresso (Apache-2.0)
+
+================================================================================
+
+Stealtify's own code is proprietary and closed-source, licensed under the
+Stealtify End User License Agreement — see the LICENSE file. This does NOT
+restrict any rights granted to you by the third-party licenses listed above.
+
+For any questions about licensing, contact the Stealtify rights holder at
+support@stealtify.app.

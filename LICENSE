@@ -1,0 +1,84 @@
+Stealtify — End User License Agreement (Proprietary)
+Copyright (c) 2025-2026 Stealtify. All rights reserved.
+
+IMPORTANT — READ CAREFULLY. This End User License Agreement ("Agreement") is a
+legal agreement between you ("You") and the Stealtify authors / rights holder
+("Licensor") for the Stealtify application, including the compiled Android
+package (APK/AAB), its binaries and accompanying documentation (collectively,
+the "Software"). By downloading, installing or using the Software, You agree to
+be bound by this Agreement. If You do not agree, do not install or use the
+Software.
+
+1. OWNERSHIP
+   The Software is licensed, not sold. The Licensor retains all right, title and
+   interest in and to the Software, including all intellectual property rights.
+   No rights are granted except as expressly set out in this Agreement.
+
+2. LICENSE GRANT
+   Subject to Your compliance with this Agreement, the Licensor grants You a
+   personal, limited, non-exclusive, non-transferable, revocable license to
+   install and run the Software, in its unmodified binary form, on devices that
+   You own or control, for Your own use.
+
+3. RESTRICTIONS
+   Except to the extent permitted by applicable mandatory law or by a license
+   governing a third-party component (see Section 5), You must NOT:
+   (a) redistribute, sublicense, sell, rent, lease, or otherwise make the
+       Software available to third parties;
+   (b) modify, adapt, or create derivative works of the Software;
+   (c) reverse engineer, decompile, or disassemble the Software, or attempt to
+       derive its source code;
+   (d) remove, alter, or obscure any proprietary notices (including this
+       Agreement or the NOTICE file);
+   (e) use the Software to build a competing product or service.
+
+   The source code of the Stealtify application (outside the third-party
+   components in Section 5) is NOT published and is not licensed to You.
+
+4. NO OPEN-SOURCE LICENSE TO STEALTIFY CODE
+   This Agreement supersedes any prior draft license for Stealtify's own code
+   (including any earlier FSL/source-available drafts). Stealtify's own code is
+   proprietary and closed-source.
+
+5. THIRD-PARTY COMPONENTS
+   The Software includes third-party open-source components, each licensed under
+   its own terms as listed in the NOTICE file distributed with the Software.
+   Those components remain governed by their respective licenses. Nothing in
+   this Agreement limits, or is intended to limit, any right granted to You
+   under those third-party licenses; in case of conflict, the third-party
+   license controls for that component.
+
+   In particular, the Software includes a MODIFIED version of xray-core
+   (github.com/xtls/xray-core), licensed under the Mozilla Public License 2.0
+   ("MPL-2.0"). In accordance with the MPL-2.0, the complete source code of the
+   modified files is made available to any recipient of the Software free of
+   charge on written request to the contact below. This obligation applies
+   regardless of the closed-source status of the rest of the Software.
+
+6. NO WARRANTY
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT.
+
+7. LIMITATION OF LIABILITY
+   TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL THE LICENSOR BE
+   LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT
+   OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE
+   USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+8. LAWFUL USE
+   You are solely responsible for using the Software in compliance with all laws
+   and regulations applicable to You.
+
+9. TERMINATION
+   This Agreement is effective until terminated. It terminates automatically if
+   You breach any of its terms. Upon termination You must cease all use of the
+   Software and delete all copies. Sections 1, 3, 5, 6, 7 and 10 survive
+   termination.
+
+10. GENERAL
+   If any provision of this Agreement is held unenforceable, the remaining
+   provisions remain in full force. This Agreement is governed by the laws of
+   the Russian Federation, without regard to conflict-of-laws rules.
+
+Contact: support@stealtify.app
