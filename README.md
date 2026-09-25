@@ -35,42 +35,34 @@
 
 ### Routing
 
-| | |
-|---|---|
-| 🎯 **Per-app routing** | assign different proxies to different apps |
-| 🌐 **Domain rules** | from DNS answers and TLS SNI |
-| 🔍 **UID identification** | precise app detection via `getConnectionOwnerUid()` (Kotlin, not a JNI callback) |
-| ♥️ **Failover & health check** | automatic proxy monitoring and switching |
-| 🔒 **Kill Switch** | in-app protection while the tunnel is being restored; for an OS-level guarantee, enable Always-on VPN |
+- 🎯 **Per-app routing** — assign different proxies to different apps
+- 🌐 **Domain rules** — from DNS answers and TLS SNI
+- 🔍 **UID identification** — precise app detection via `getConnectionOwnerUid()` (Kotlin, not a JNI callback)
+- ♥️ **Failover & health check** — automatic proxy monitoring and switching
+- 🔒 **Kill Switch** — in-app protection while the tunnel is being restored; for an OS-level guarantee, enable Always-on VPN
 
 ### Protocols and import
 
-| | |
-|---|---|
-| 🔗 **8 protocols** | SOCKS5, HTTP CONNECT, SSH, VLESS, VMess, Trojan, Shadowsocks, AmneziaWG |
-| 🚀 **Dual engine** | Kotlin TCP/UDP stack (SOCKS5, HTTP CONNECT) + Go engine (xray-core for VLESS/VMess/Trojan, plus SSH, Shadowsocks, AmneziaWG) |
-| 📥 **URI import** | `vless://`, `vmess://`, `trojan://`, `ss://`, `socks5://`, `http://`, `ssh://`, `awg://`, `vpn://` links |
-| 📷 **QR import** | scan QR codes with proxy configuration |
-| 🔗 **Share proxy** | QR code and copy link to clipboard |
+- 🔗 **8 protocols** — SOCKS5, HTTP CONNECT, SSH, VLESS, VMess, Trojan, Shadowsocks, AmneziaWG
+- 🚀 **Dual engine** — Kotlin TCP/UDP stack (SOCKS5, HTTP CONNECT) + Go engine (xray-core for VLESS/VMess/Trojan, plus SSH, Shadowsocks, AmneziaWG)
+- 📥 **URI import** — `vless://`, `vmess://`, `trojan://`, `ss://`, `socks5://`, `http://`, `ssh://`, `awg://`, `vpn://` links
+- 📷 **QR import** — scan QR codes with proxy configuration
+- 🔗 **Share proxy** — QR code and copy link to clipboard
 
 ### DNS and security
 
-| | |
-|---|---|
-| 🔐 **Encrypted DNS (DoT/DoH)** | with presets for Cloudflare, Google, AdGuard, Quad9 |
-| 🚫 **DNS filtering** | built-in list of blocked domains, off by default |
-| ✅ **Authenticity check** | every release is signed and verified on startup; counterfeit builds are rejected |
+- 🔐 **Encrypted DNS (DoT/DoH)** — with presets for Cloudflare, Google, AdGuard, Quad9
+- 🚫 **DNS filtering** — built-in list of blocked domains, off by default
+- ✅ **Authenticity check** — every release is signed and verified on startup; counterfeit builds are rejected
 
 ### Device and interface
 
-| | |
-|---|---|
-| 🔋 **No root** | works on stock Android 10+ through the VpnService API |
-| ♻️ **Auto-start** | launch the VPN on device boot |
-| 📊 **Monitoring** | connection logs, real-time traffic statistics |
-| 📱 **Material You** | modern UI on Jetpack Compose + Material 3 |
-| 📺 **Android TV** | separate build (see below) |
-| 🇷🇺 **Interface language** | Russian |
+- 🔋 **No root** — works on stock Android 10+ through the VpnService API
+- ♻️ **Auto-start** — launch the VPN on device boot
+- 📊 **Monitoring** — connection logs, real-time traffic statistics
+- 📱 **Material You** — modern UI on Jetpack Compose + Material 3
+- 📺 **Android TV** — separate build (see below)
+- 🇷🇺 **Interface language: Russian**
 
 ## Requirements
 
