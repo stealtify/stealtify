@@ -1,3 +1,7 @@
+<p align="center">
+  <img src=".github/assets/banner.ru.svg" alt="Stealtify — Android-клиент маршрутизации трафика" width="100%">
+</p>
+
 # Stealtify — Per-App Proxy Client for Android
 
 <p align="center">

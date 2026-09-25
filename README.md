@@ -1,3 +1,7 @@
+<p align="center">
+  <img src=".github/assets/banner.svg" alt="Stealtify — per-app proxy client for Android" width="100%">
+</p>
+
 # Stealtify — Per-App Proxy Client for Android
 
 <p align="center">
