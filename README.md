@@ -27,7 +27,7 @@
   <img src=".github/assets/screens/tv-home.png" alt="Android TV home screen" height="340">
 </p>
 
-<p align="center"><sub>Left: a group's fallback — if the group's proxy is down or slow, traffic goes through the backup group. Right: the Android TV build. Interface language: Russian.</sub></p>
+<p align="center"><sub>A group's fallback: if the group's proxy is down or slow, traffic goes through the backup group · The Android TV build · Interface language: Russian</sub></p>
 
 ---
 
