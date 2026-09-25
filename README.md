@@ -2,10 +2,12 @@
   <img src=".github/assets/banner.svg" alt="Stealtify — per-app proxy client for Android" width="100%">
 </p>
 
-# Stealtify — Per-App Proxy Client for Android
-
 <p align="center">
   <b>Route each app's traffic through its own proxy. No root.</b>
+</p>
+
+<p align="center">
+  <a href="https://github.com/stealtify/stealtify/releases/latest"><img src=".github/assets/download.svg" alt="Download the latest APK" height="52"></a>
 </p>
 
 <p align="center">
@@ -17,48 +19,58 @@
   <a href="#documentation">Documentation</a>
 </p>
 
-<p align="center">🇷🇺 Русская версия: <a href="./README.ru.md">README.ru.md</a></p>
+<p align="center">🌐 <a href="https://stealtify.app">stealtify.app</a> · 📥 <a href="https://update.stealtify.app">update.stealtify.app</a> · 🇷🇺 <a href="./README.ru.md">Русская версия</a></p>
 
-<p align="center">🌐 Website: <a href="https://stealtify.app">stealtify.app</a> · 📥 Downloads: <a href="https://update.stealtify.app">update.stealtify.app</a></p>
+<p align="center">
+  <img src=".github/assets/screens/failover.png" alt="Fallback group dialog on the Rules screen" height="340">
+  &nbsp;
+  <img src=".github/assets/screens/tv-home.png" alt="Android TV home screen" height="340">
+</p>
 
----
-
-## Documentation
-
-| Document | Description |
-|----------|-------------|
-| [📥 Install](./docs/INSTALL.md) | Installation and checksum verification |
-| [📚 User guide](./docs/USER_GUIDE.md) | Full end-user manual |
-| [📺 Android TV](./docs/tv/TV_INSTALL.md) | TV build install & guide |
-| [🛠 Troubleshooting](./docs/TROUBLESHOOTING.md) | Common problems and fixes |
-| [🔒 Privacy policy](./docs/PRIVACY.md) | What the app connects to, and what it doesn't |
-| [📋 Roadmap](./docs/ROADMAP.md) | What's shipped and what's planned |
-| [📝 Changelog](./CHANGELOG.md) | Release history |
-| [⚖️ Third-party licenses](./docs/LICENSES.md) | Dependency licenses |
+<p align="center"><sub>Left: a group's fallback — if the group's proxy is down or slow, traffic goes through the backup group. Right: the Android TV build. Interface language: Russian.</sub></p>
 
 ---
 
 ## Features
 
-- 🎯 **Per-app routing** — assign different proxies to different apps
-- 🌐 **Domain rules** — from DNS answers and TLS SNI
-- 🔗 **8 protocols** — SOCKS5, HTTP CONNECT, SSH, VLESS, VMess, Trojan, Shadowsocks, AmneziaWG
-- 🚀 **Dual engine** — Kotlin TCP/UDP stack (SOCKS5, HTTP CONNECT) + Go engine (xray-core for VLESS/VMess/Trojan, plus SSH, Shadowsocks, AmneziaWG)
-- 🔍 **UID identification** — precise app detection via `getConnectionOwnerUid()` (Kotlin, not a JNI callback)
-- 📊 **Monitoring** — connection logs, real-time traffic statistics
-- 🔒 **Kill Switch** — in-app protection while the tunnel is being restored; for an OS-level guarantee, enable Always-on VPN
-- 🚫 **DNS filtering** — built-in list of blocked domains, off by default
-- 🔋 **No root** — works on stock Android 10+ through the VpnService API
-- 📱 **Material You** — modern UI on Jetpack Compose + Material 3
-- 📥 **URI import** — `vless://`, `vmess://`, `trojan://`, `ss://`, `socks5://`, `http://`, `ssh://`, `awg://`, `vpn://` links
-- 📷 **QR import** — scan QR codes with proxy configuration
-- 🔗 **Share proxy** — QR code and copy link to clipboard
-- 🔐 **Encrypted DNS (DoT/DoH)** — with presets for Cloudflare, Google, AdGuard, Quad9
-- ✅ **Authenticity check** — every release is signed and verified on startup; counterfeit builds are rejected
-- ♻️ **Auto-start** — launch the VPN on device boot
-- ♥️ **Failover & health check** — automatic proxy monitoring and switching
-- 📺 **Android TV** — separate build (see below)
-- 🇷🇺 **Interface language: Russian**
+### Routing
+
+| | |
+|---|---|
+| 🎯 **Per-app routing** | assign different proxies to different apps |
+| 🌐 **Domain rules** | from DNS answers and TLS SNI |
+| 🔍 **UID identification** | precise app detection via `getConnectionOwnerUid()` (Kotlin, not a JNI callback) |
+| ♥️ **Failover & health check** | automatic proxy monitoring and switching |
+| 🔒 **Kill Switch** | in-app protection while the tunnel is being restored; for an OS-level guarantee, enable Always-on VPN |
+
+### Protocols and import
+
+| | |
+|---|---|
+| 🔗 **8 protocols** | SOCKS5, HTTP CONNECT, SSH, VLESS, VMess, Trojan, Shadowsocks, AmneziaWG |
+| 🚀 **Dual engine** | Kotlin TCP/UDP stack (SOCKS5, HTTP CONNECT) + Go engine (xray-core for VLESS/VMess/Trojan, plus SSH, Shadowsocks, AmneziaWG) |
+| 📥 **URI import** | `vless://`, `vmess://`, `trojan://`, `ss://`, `socks5://`, `http://`, `ssh://`, `awg://`, `vpn://` links |
+| 📷 **QR import** | scan QR codes with proxy configuration |
+| 🔗 **Share proxy** | QR code and copy link to clipboard |
+
+### DNS and security
+
+| | |
+|---|---|
+| 🔐 **Encrypted DNS (DoT/DoH)** | with presets for Cloudflare, Google, AdGuard, Quad9 |
+| 🚫 **DNS filtering** | built-in list of blocked domains, off by default |
+| ✅ **Authenticity check** | every release is signed and verified on startup; counterfeit builds are rejected |
+
+### Device and interface
+
+| | |
+|---|---|
+| 🔋 **No root** | works on stock Android 10+ through the VpnService API |
+| ♻️ **Auto-start** | launch the VPN on device boot |
+| 📊 **Monitoring** | connection logs, real-time traffic statistics |
+| 📱 **Material You** | modern UI on Jetpack Compose + Material 3 |
+| 📺 **Android TV** | separate build (see below) |
+| 🇷🇺 **Interface language** | Russian |
 
 ## Requirements
 
@@ -112,8 +124,6 @@ Full end-user manual: **[docs/USER_GUIDE.md](./docs/USER_GUIDE.md)**.
 
 Tap **Connect** on the Home screen.
 
----
-
 ## Supported protocols
 
 | Protocol | Auth | UDP |
@@ -157,6 +167,19 @@ Status: **beta** — expect rough edges; see the TV guides.
 
 Guides: [docs/tv/TV_INSTALL.md](./docs/tv/TV_INSTALL.md) · [docs/tv/TV_USER_GUIDE.md](./docs/tv/TV_USER_GUIDE.md)
 
+## Documentation
+
+| Document | Description |
+|----------|-------------|
+| [📥 Install](./docs/INSTALL.md) | Installation and checksum verification |
+| [📚 User guide](./docs/USER_GUIDE.md) | Full end-user manual |
+| [📺 Android TV](./docs/tv/TV_INSTALL.md) | TV build install & guide |
+| [🛠 Troubleshooting](./docs/TROUBLESHOOTING.md) | Common problems and fixes |
+| [🔒 Privacy policy](./docs/PRIVACY.md) | What the app connects to, and what it doesn't |
+| [📋 Roadmap](./docs/ROADMAP.md) | What's shipped and what's planned |
+| [📝 Changelog](./CHANGELOG.md) | Release history |
+| [⚖️ Third-party licenses](./docs/LICENSES.md) | Dependency licenses |
+
 ## License
 
 Proprietary license (EULA) — Copyright © 2025–2026 Stealtify. All rights reserved.
@@ -165,10 +188,10 @@ keep their own licenses — see [NOTICE](./NOTICE) and [docs/LICENSES.md](./docs
 
 ---
 
-<p align="center">
-  Made with ❤️ for privacy and freedom
-</p>
-
----
+<div align="center">
 
 📥 [Install](./docs/INSTALL.md) · 📚 [User guide](./docs/USER_GUIDE.md) · 📋 [Roadmap](./docs/ROADMAP.md) · 🔒 [Privacy](./docs/PRIVACY.md)
+
+<sub>Made with ❤️ for privacy and freedom</sub>
+
+</div>

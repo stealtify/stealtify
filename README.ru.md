@@ -2,10 +2,12 @@
   <img src=".github/assets/banner.ru.svg" alt="Stealtify — Android-клиент маршрутизации трафика" width="100%">
 </p>
 
-# Stealtify — Per-App Proxy Client for Android
-
 <p align="center">
   <b>Маршрутизация трафика каждого приложения через свой прокси. Без root.</b>
+</p>
+
+<p align="center">
+  <a href="https://github.com/stealtify/stealtify/releases/latest"><img src=".github/assets/download.ru.svg" alt="Скачать последний APK" height="52"></a>
 </p>
 
 <p align="center">
@@ -17,48 +19,58 @@
   <a href="#документация">Документация</a>
 </p>
 
-<p align="center">🇬🇧 English version: <a href="./README.md">README.md</a></p>
+<p align="center">🌐 <a href="https://stealtify.app">stealtify.app</a> · 📥 <a href="https://update.stealtify.app">update.stealtify.app</a> · 🇬🇧 <a href="./README.md">English version</a></p>
 
-<p align="center">🌐 Сайт: <a href="https://stealtify.app">stealtify.app</a> · 📥 Загрузки: <a href="https://update.stealtify.app">update.stealtify.app</a></p>
+<p align="center">
+  <img src=".github/assets/screens/failover.png" alt="Окно резервной группы на экране правил" height="340">
+  &nbsp;
+  <img src=".github/assets/screens/tv-home.png" alt="Главный экран сборки для Android TV" height="340">
+</p>
 
----
-
-## Документация
-
-| Документ | Описание |
-|----------|----------|
-| [📥 Установка](./docs/INSTALL.ru.md) | Установка и проверка контрольной суммы |
-| [📚 Руководство пользователя](./docs/USER_GUIDE.ru.md) | Полное руководство |
-| [📺 Android TV](./docs/tv/TV_INSTALL.ru.md) | Установка и руководство для ТВ-сборки |
-| [🛠 Решение проблем](./docs/TROUBLESHOOTING.md) | Частые проблемы и их решения |
-| [🔒 Конфиденциальность](./docs/PRIVACY.md) | К чему приложение обращается, а к чему — нет |
-| [📋 Roadmap](./docs/ROADMAP.md) | Что готово и что запланировано |
-| [📝 Changelog](./CHANGELOG.md) | История релизов |
-| [⚖️ Лицензии зависимостей](./docs/LICENSES.md) | Лицензии сторонних компонентов |
+<p align="center"><sub>Слева — резерв группы: если прокси группы недоступен или медленный, трафик идёт через резервную группу. Справа — сборка для Android TV.</sub></p>
 
 ---
 
 ## Возможности
 
-- 🎯 **Per-app маршрутизация** — назначайте разные прокси разным приложениям
-- 🌐 **Доменные правила** — по ответам DNS и по TLS SNI
-- 🔗 **8 протоколов** — SOCKS5, HTTP CONNECT, SSH, VLESS, VMess, Trojan, Shadowsocks, AmneziaWG
-- 🚀 **Двойной движок** — Kotlin TCP/UDP стек (SOCKS5, HTTP CONNECT) + Go-движок (xray-core для VLESS/VMess/Trojan, плюс SSH, Shadowsocks, AmneziaWG)
-- 🔍 **UID-идентификация** — точное определение приложений через `getConnectionOwnerUid()` (Kotlin, а не JNI callback)
-- 📊 **Мониторинг** — логи подключений, статистика трафика в реальном времени
-- 🔒 **Kill Switch** — защита внутри приложения на время восстановления туннеля; для гарантии на уровне ОС включите Always-on VPN
-- 🚫 **DNS фильтрация** — встроенный список блокируемых доменов, по умолчанию выключена
-- 🔋 **Без root** — работает на стоковом Android 10+ через VpnService API
-- 📱 **Material You** — современный UI на Jetpack Compose + Material 3
-- 📥 **Импорт URI** — ссылки `vless://`, `vmess://`, `trojan://`, `ss://`, `socks5://`, `http://`, `ssh://`, `awg://`, `vpn://`
-- 📷 **QR-код импорт** — сканирование QR-кодов с прокси-конфигурацией
-- 🔗 **Поделиться прокси** — QR-код и копирование ссылки в буфер обмена
-- 🔐 **Шифрованный DNS (DoT/DoH)** — с пресетами Cloudflare, Google, AdGuard, Quad9
-- ✅ **Проверка подлинности** — каждая сборка подписана и проверяется при запуске; поддельные сборки отвергаются
-- ♻️ **Авто-старт** — запуск VPN при загрузке устройства
-- ♥️ **Failover & Health Check** — автоматический мониторинг и переключение прокси
-- 📺 **Android TV** — отдельная сборка (см. ниже)
-- 🇷🇺 **Язык интерфейса: русский**
+### Маршрутизация
+
+| | |
+|---|---|
+| 🎯 **Per-app маршрутизация** | назначайте разные прокси разным приложениям |
+| 🌐 **Доменные правила** | по ответам DNS и по TLS SNI |
+| 🔍 **UID-идентификация** | точное определение приложений через `getConnectionOwnerUid()` (Kotlin, а не JNI callback) |
+| ♥️ **Failover & Health Check** | автоматический мониторинг и переключение прокси |
+| 🔒 **Kill Switch** | защита внутри приложения на время восстановления туннеля; для гарантии на уровне ОС включите Always-on VPN |
+
+### Протоколы и импорт
+
+| | |
+|---|---|
+| 🔗 **8 протоколов** | SOCKS5, HTTP CONNECT, SSH, VLESS, VMess, Trojan, Shadowsocks, AmneziaWG |
+| 🚀 **Двойной движок** | Kotlin TCP/UDP стек (SOCKS5, HTTP CONNECT) + Go-движок (xray-core для VLESS/VMess/Trojan, плюс SSH, Shadowsocks, AmneziaWG) |
+| 📥 **Импорт URI** | ссылки `vless://`, `vmess://`, `trojan://`, `ss://`, `socks5://`, `http://`, `ssh://`, `awg://`, `vpn://` |
+| 📷 **QR-код импорт** | сканирование QR-кодов с прокси-конфигурацией |
+| 🔗 **Поделиться прокси** | QR-код и копирование ссылки в буфер обмена |
+
+### DNS и безопасность
+
+| | |
+|---|---|
+| 🔐 **Шифрованный DNS (DoT/DoH)** | с пресетами Cloudflare, Google, AdGuard, Quad9 |
+| 🚫 **DNS фильтрация** | встроенный список блокируемых доменов, по умолчанию выключена |
+| ✅ **Проверка подлинности** | каждая сборка подписана и проверяется при запуске; поддельные сборки отвергаются |
+
+### Устройство и интерфейс
+
+| | |
+|---|---|
+| 🔋 **Без root** | работает на стоковом Android 10+ через VpnService API |
+| ♻️ **Авто-старт** | запуск VPN при загрузке устройства |
+| 📊 **Мониторинг** | логи подключений, статистика трафика в реальном времени |
+| 📱 **Material You** | современный UI на Jetpack Compose + Material 3 |
+| 📺 **Android TV** | отдельная сборка (см. ниже) |
+| 🇷🇺 **Язык интерфейса** | русский |
 
 ## Требования
 
@@ -112,8 +124,6 @@
 
 Нажмите **Подключить** на главном экране.
 
----
-
 ## Поддерживаемые протоколы
 
 | Протокол | Auth | UDP |
@@ -157,6 +167,19 @@ Stealtify также поставляется сборкой для Android TV �
 
 Инструкции: [docs/tv/TV_INSTALL.ru.md](./docs/tv/TV_INSTALL.ru.md) · [docs/tv/TV_USER_GUIDE.ru.md](./docs/tv/TV_USER_GUIDE.ru.md)
 
+## Документация
+
+| Документ | Описание |
+|----------|----------|
+| [📥 Установка](./docs/INSTALL.ru.md) | Установка и проверка контрольной суммы |
+| [📚 Руководство пользователя](./docs/USER_GUIDE.ru.md) | Полное руководство |
+| [📺 Android TV](./docs/tv/TV_INSTALL.ru.md) | Установка и руководство для ТВ-сборки |
+| [🛠 Решение проблем](./docs/TROUBLESHOOTING.md) | Частые проблемы и их решения |
+| [🔒 Конфиденциальность](./docs/PRIVACY.md) | К чему приложение обращается, а к чему — нет |
+| [📋 Roadmap](./docs/ROADMAP.md) | Что готово и что запланировано |
+| [📝 Changelog](./CHANGELOG.md) | История релизов |
+| [⚖️ Лицензии зависимостей](./docs/LICENSES.md) | Лицензии сторонних компонентов |
+
 ## Лицензия
 
 Проприетарная лицензия (EULA) — Copyright © 2025–2026 Stealtify. Все права защищены.
@@ -165,10 +188,10 @@ Stealtify также поставляется сборкой для Android TV �
 
 ---
 
-<p align="center">
-  Made with ❤️ for privacy and freedom
-</p>
-
----
+<div align="center">
 
 📥 [Установка](./docs/INSTALL.ru.md) · 📚 [Руководство](./docs/USER_GUIDE.ru.md) · 📋 [Roadmap](./docs/ROADMAP.md) · 🔒 [Конфиденциальность](./docs/PRIVACY.md)
+
+<sub>Made with ❤️ for privacy and freedom</sub>
+
+</div>
